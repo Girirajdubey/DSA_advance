@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+struct temp
+{
+    int data;
+    int duo;
+};
+/* struct struct_name new_name ; */
+struct temp temp2;
+int main(){
+    temp2.data=50;
+    temp2.duo=100;
+    printf("%d ----- %d",temp2.data,temp2.duo); // 50 ----- 100
+    struct temp * ptr = &temp2 ;//Variable ptr of type pointer is pointing to the address of the variable temp2 of type structre .   
+    //ptr.data=69; this is error|| ptr is pointer so if we try to manupulate the data of temp2 we cannot use (.){member pointer operator} , we should use structure pointer operator(->)
+    ptr->data=69;// that means ptr has only temp2 add and by having this ptr can acess the data 
+    
+    printf("\n after manupulation = %d",temp2.data);//manupulation sucessful 
+
+    return 0;
+}
