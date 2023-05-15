@@ -53,7 +53,7 @@ void knappy(struct data list[],int num ){
         i++;
     }
     if(bag_size>0){
-        float fraction_weight=(float)(bag_size)/(list[i].weight);
+        float fraction_weight=(float)(bag_size)/(list[i].weight); // **** type casting is must other wise question wise  u will get wrong answer 
         float  aux=fraction_weight*(list[i].profit);
         gross_proft= gross_proft + aux;
     }
